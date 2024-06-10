@@ -1,0 +1,21 @@
+<p>listado works!</p>
+
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" 
+    *ngFor="let producto of productos ; 
+    let i = index;
+    let first = first;
+    let last = last;
+    let isEven = even; "
+    [ngClass]="{'list-group-item-dark': last, 'list-group-item-primary': isEven }"
+
+    >
+        <div>
+            <span class="badge bg-primary rounded-pill"> {{i+1}} </span>
+            <span class="text-primary"> {{producto.nombre}} </span>
+            <u> {{producto.descripcion}} </u> 
+            $ <strong>{{producto.precio}}</strong>
+        </div>
+        <span> <button class="btn btn-danger">Eliminar</button> </span>
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+<p>main-page works!</p>
+<div class="row">
+    <div class="col">
+        Header
+    </div>
+
+</div>
+<div class="row">
+    <div class="col col-8">
+        <app-listado [productos] = "productos"></app-listado>
+        
+    </div>
+    <div class="col">
+        <app-agregar-producto (onNewProducto)="onNewProducto($event)"></app-agregar-producto>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        Footer
+    </div>
+</div>

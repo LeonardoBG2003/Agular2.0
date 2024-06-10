@@ -1,0 +1,22 @@
+<p>agregar-proveedor works!</p>
+<form class="row">
+    <input 
+    type="text"
+    [(ngModel)]="proveedor1.nombre"
+    name="nombre" 
+    class="form-control mb-2" 
+    placeholder="Nombre">
+
+    <input type="text"
+    name="direccion"
+    class="form-control mb-2"
+    placeholder="Direccion">
+
+    <input type="text"
+    name="telefono"
+    class="form-control mb-2" 
+    placeholder="Telefono">
+    
+    <button type="submit" class="btn btn-primary">Agregar</button>
+    <pre>{{proveedor1 | json }}</pre>
+</form>

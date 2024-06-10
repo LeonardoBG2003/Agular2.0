@@ -1,0 +1,20 @@
+<p>listado-proveedor works!</p>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" 
+    *ngFor="let proveedor of proveedores ; 
+    let i = index;
+    let first = first;
+    let last = last;
+    let isEven = even; "
+    [ngClass]="{'list-group-item-dark': last, 'list-group-item-primary': isEven }"
+
+    >
+        <div>
+            <span class="badge bg-primary rounded-pill"> {{i+1}} </span>
+            <span class="text-primary"> {{proveedor.nombre}} </span>
+            <u> {{proveedor.direccion}} </u> 
+            Tel: <strong>{{proveedor.telefono}}</strong>
+        </div>
+        <span> <button class="btn btn-danger">Eliminar</button> </span>
+    </li>
+</ul>
